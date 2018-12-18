@@ -1,0 +1,103 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+D:\Android\Android Space\DouDizhu
+                  -              
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* README.md
+* build-all.xml
+* build-off-line.xml
+* build-one.xml
+* build_bak.xml
+* proguard-project.txt
+* proguard.cfg
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:22.+
+gson-2.2.3.jar => com.google.code.gson:gson:2.2.3
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.3.jar => version 2.2.3 in com.google.code.gson:gson:2.2.3
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => yYGameCard\src\main\AndroidManifest.xml
+* assets\ => yYGameCard\src\main\assets\
+* libs\BmobSDK_V3.4.6_0415.jar => yYGameCard\libs\BmobSDK_V3.4.6_0415.jar
+* libs\iconad1.0.jar => yYGameCard\libs\iconad1.0.jar
+* libs\netty.jar => yYGameCard\libs\netty.jar
+* libs\okhttp-2.4.0.jar => yYGameCard\libs\okhttp-2.4.0.jar
+* libs\okio-1.4.0.jar => yYGameCard\libs\okio-1.4.0.jar
+* libs\qumi_android_2.8.2.jar => yYGameCard\libs\qumi_android_2.8.2.jar
+* libs\qumi_jfq_3.1.1.jar => yYGameCard\libs\qumi_jfq_3.1.1.jar
+* lint.xml => yYGameCard\lint.xml
+* res\ => yYGameCard\src\main\res\
+* src\ => yYGameCard\src\main\java\
+* src\config.properties => yYGameCard\src\main\resources\config.properties
+
+Missing Android Support Repository:
+-----------------------------------
+Some useful libraries, such as the Android Support Library, are
+installed from a special Maven repository, which should be installed
+via the SDK manager.
+
+It looks like this library is missing from your SDK installation at:
+null
+
+To install it, open the SDK manager, and in the Extras category,
+select "Android Support Repository". You may also want to install the
+"Google Repository" if you want to use libraries like Google Play
+Services.
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

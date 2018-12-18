@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/root"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f5f5f5">
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/relay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#444"/>
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#444"/>
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relay_top"
+        android:orientation="vertical"
+
+        >
+
+        <com.youth.banner.Banner
+            app:indicator_drawable_selected="@drawable/yuan_orner"
+            app:indicator_drawable_unselected="@drawable/yuan_white"
+            android:id="@+id/image_banner"
+            android:layout_width="match_parent"
+            android:layout_height="520px"/>
+
+        <LinearLayout
+            android:id="@+id/ll_announcement"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5px"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_gb"
+                android:layout_width="45px"
+                android:layout_height="45px"
+                android:layout_marginRight="20px"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/tv_pao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/yy_01"
+                android:textSize="40px"
+                />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#dbdbdb"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5px"/>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_red_envelope"
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30px"
+        android:layout_marginRight="20px"
+        android:scaleType="centerCrop"/>
+</RelativeLayout>

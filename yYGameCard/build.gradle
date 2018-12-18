@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.haoyun.playcard"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 101
+        versionName "1.0.1"
+        useLibrary 'org.apache.http.legacy'
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "a3a8ca9889eb6f831d4f445a", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86','armeabi-v7a'//, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.google.code.gson:gson:2.2.3'
+    implementation files('libs/BmobSDK_V3.4.6_0415.jar')
+    implementation files('libs/iconad1.0.jar')
+    implementation files('libs/netty.jar')
+    implementation files('libs/qumi_android_2.8.2.jar')
+    implementation files('libs/qumi_jfq_3.1.1.jar')
+    implementation files('libs/jcore-android-1.1.9.jar')
+    implementation files('libs/jpush-android-3.1.1.jar')
+
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.lzy.net:okserver:2.0.5'
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+}
