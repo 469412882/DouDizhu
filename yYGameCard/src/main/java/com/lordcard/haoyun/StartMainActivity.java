@@ -35,7 +35,7 @@ public class StartMainActivity extends Activity {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-    private String urls = "http://www.nnokwa.com/lottery/back/api.php?app_id=105670238&type=android";
+    private String urls = "http://www.nnokwa.com/lottery/back/api.php?app_id=0056700103&type=android";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

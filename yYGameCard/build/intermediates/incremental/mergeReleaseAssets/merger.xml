@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="G:\jzworkspaces\DouDizhu\yYGameCard\src\main\assets"><file name="fonts/LCD.ttf" path="G:\jzworkspaces\DouDizhu\yYGameCard\src\main\assets\fonts\LCD.ttf"/><file name="fonts/NUM.ttf" path="G:\jzworkspaces\DouDizhu\yYGameCard\src\main\assets\fonts\NUM.ttf"/></source><source path="G:\jzworkspaces\DouDizhu\yYGameCard\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="G:\jzworkspaces\DouDizhu\yYGameCard\src\release\assets"/></dataSet></merger>

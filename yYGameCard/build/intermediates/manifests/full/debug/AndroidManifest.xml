@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.haoyun.playcard"
+    package="com.jzb.lyqpyyb"
     android:versionCode="101"
     android:versionName="1.0.1" >
 
@@ -15,10 +15,10 @@
         android:smallScreens="true" />
     <!-- 添加权限 -->
     <permission
-        android:name="com.haoyun.playcard.permission.JPUSH_MESSAGE"
+        android:name="com.jzb.lyqpyyb.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.haoyun.playcard.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.jzb.lyqpyyb.permission.JPUSH_MESSAGE" />
 
     <!-- Required  一些系统要求的权限，如访问网络等 -->
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
@@ -57,7 +57,6 @@
         android:debuggable="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="design_width"
@@ -85,7 +84,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.haoyun.playcard.FileProvider"
+            android:authorities="com.jzb.lyqpyyb.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -176,7 +175,7 @@
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.haoyun.playcard.FileProvider"
+            android:authorities="com.jzb.lyqpyyb.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -199,7 +198,7 @@
         <!-- since 3.0.9 Required SDK 核心功能 -->
         <provider
             android:name="cn.jpush.android.service.DataProvider"
-            android:authorities="com.haoyun.playcard.DataProvider"
+            android:authorities="com.jzb.lyqpyyb.DataProvider"
             android:exported="true" />
 
         <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
@@ -211,7 +210,7 @@
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
 
-                <category android:name="com.haoyun.playcard" />
+                <category android:name="com.jzb.lyqpyyb" />
             </intent-filter>
         </service>
 
@@ -222,7 +221,7 @@
             <intent-filter android:priority="1000" >
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
 
-                <category android:name="com.haoyun.playcard" />
+                <category android:name="com.jzb.lyqpyyb" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -247,7 +246,7 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.haoyun.playcard" />
+                <category android:name="com.jzb.lyqpyyb" />
             </intent-filter>
         </activity>
         <!-- SDK核心功能 -->
@@ -258,7 +257,7 @@
             android:theme="@style/MyDialog" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.haoyun.playcard" />
+                <category android:name="com.jzb.lyqpyyb" />
             </intent-filter>
         </activity>
 
@@ -283,13 +282,13 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
                 <action android:name="cn.jpush.android.intent.CONNECTION" />
                 <!-- 接收网络变化 连接/断开 since 1.6.3 -->
-                <category android:name="com.haoyun.playcard" />
+                <category android:name="com.jzb.lyqpyyb" />
             </intent-filter>
         </receiver>
 
         <meta-data
             android:name="JPUSH_APPKEY"
-            android:value="a3a8ca9889eb6f831d4f445a" />
+            android:value="016c3c9c7da8377e967006ea" />
         <meta-data
             android:name="JPUSH_CHANNEL"
             android:value="developer-default" />

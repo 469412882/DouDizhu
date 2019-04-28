@@ -5,7 +5,7 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        applicationId "com.haoyun.playcard"
+        applicationId "com.jzb.lyqpyyb"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 101
@@ -13,7 +13,7 @@ android {
         useLibrary 'org.apache.http.legacy'
         manifestPlaceholders = [
                 JPUSH_PKGNAME: applicationId,
-                JPUSH_APPKEY : "a3a8ca9889eb6f831d4f445a", //JPush上注册的包名对应的appkey.
+                JPUSH_APPKEY : "016c3c9c7da8377e967006ea", //JPush上注册的包名对应的appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
 
